@@ -1,0 +1,72 @@
+.booking-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.booking-fields label {
+  border: 1px solid var(--line);
+  padding: 10px 9px;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  column-gap: 7px;
+  align-items: center;
+  font-size: 10px;
+  color: #6a756f;
+}
+
+.booking-fields label span { font-size: 10px; }
+.booking-fields label svg { grid-row: span 2; color: var(--ink); }
+
+.booking-fields input,
+.booking-fields select {
+  grid-column: 2;
+  width: 100%;
+  min-width: 0;
+  margin-top: 2px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  outline: 0;
+}
+
+.booking-fields input { color-scheme: light; }
+
+.booking-fields .date-field { grid-template-columns: 18px minmax(142px, 1fr); }
+.booking-fields .date-field input { min-width: 142px; }
+
+.total {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin: 0 0 18px;
+  padding: 17px 0;
+  border-top: 1px solid var(--line);
+}
+
+.total span,
+.total small { display: block; }
+.total span { font-size: 12px; font-weight: 700; }
+.total small { margin-top: 4px; color: #748078; font-size: 10px; }
+.total strong {
+  color: var(--clay);
+  font-family: 'Playfair Display', 'Noto Sans KR', serif;
+  font-size: 24px;
+  letter-spacing: -.8px;
+}
+
+.match-message {
+  margin: 13px 0 0;
+  color: var(--ink);
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+@media (max-width: 470px) {
+  .booking-fields { grid-template-columns: 1fr; }
+  .booking-fields .date-field input { min-width: 0; }
+}
